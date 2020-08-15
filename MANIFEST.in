@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include virtualevent *.css
+recursive-include virtualevent *.csv
+recursive-include virtualevent *.html
+recursive-include virtualevent *.ico
+recursive-include virtualevent *.js
+recursive-include virtualevent *.json
+recursive-include virtualevent *.md
+recursive-include virtualevent *.png
+recursive-include virtualevent *.py
+recursive-include virtualevent *.svg
+recursive-include virtualevent *.txt
+recursive-exclude virtualevent *.pyc

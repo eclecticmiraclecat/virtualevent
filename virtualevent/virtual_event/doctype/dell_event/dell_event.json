@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "creation": "2020-08-11 10:33:15.828202",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "event_id",
+  "event_title",
+  "start_date",
+  "end_date",
+  "time_zone",
+  "country",
+  "organizer",
+  "organizer_address",
+  "contact",
+  "event_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_id",
+   "fieldtype": "Data",
+   "label": "Event ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_title",
+   "fieldtype": "Data",
+   "label": "Event Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Data",
+   "label": "Time Zone"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "organizer",
+   "fieldtype": "Data",
+   "label": "Organizer"
+  },
+  {
+   "fieldname": "organizer_address",
+   "fieldtype": "Data",
+   "label": "Organizer Address"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact H/P"
+  },
+  {
+   "fieldname": "event_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Event Type",
+   "options": "\nInternal Company\nProperties\nFood\nAutomobil\nIT\nRobotics\nAgriculture\nEducation\nManufacturing",
+   "reqd": 1,
+   "search_index": 1
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-11 10:33:45.411445",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Event",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

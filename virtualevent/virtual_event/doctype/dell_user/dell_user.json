@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "autoname": "DELL-.###",
+ "creation": "2020-08-10 00:04:10.581833",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "badge_id",
+  "user_type",
+  "first_name",
+  "last_name",
+  "title",
+  "gender",
+  "email",
+  "hp_contact",
+  "company",
+  "industrial",
+  "position",
+  "address",
+  "city",
+  "postcode",
+  "country",
+  "state",
+  "website",
+  "name_card"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "User Type",
+   "options": "\nEmployee\nPartner\nSpeaker\nLobby Onsite Support\nLobby Tech Support\nDELL Booth Admin\nSponsor Booth Admin\nPoster Booth Admin",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hp_contact",
+   "fieldtype": "Data",
+   "label": "HP Contact"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company"
+  },
+  {
+   "fieldname": "industrial",
+   "fieldtype": "Data",
+   "label": "Industrial"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Data",
+   "label": "Position"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "postcode",
+   "fieldtype": "Data",
+   "label": "Postcode"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "name_card",
+   "fieldtype": "Data",
+   "label": "Name Card"
+  },
+  {
+   "fieldname": "badge_id",
+   "fieldtype": "Data",
+   "label": "Badge ID"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-12 21:04:00.319633",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell User",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell User",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_order": "DESC",
+ "track_changes": 1
+}

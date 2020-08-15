@@ -1,0 +1,30 @@
+{
+ "cards": [
+  {
+   "hidden": 0,
+   "label": "Event Administration",
+   "links": "[\n    {\n        \"label\": \"Evenet General Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    }\n]"
+  }
+ ],
+ "cards_label": "",
+ "category": "Domains",
+ "charts": [],
+ "creation": "2020-08-11 12:50:36.938697",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Desk Page",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_standard": 1,
+ "label": "Virtual Event test",
+ "modified": "2020-08-11 12:50:36.938697",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Virtual Event test",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": []
+}

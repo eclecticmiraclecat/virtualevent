@@ -1,0 +1,45 @@
+{
+ "cards": [
+  {
+   "hidden": 0,
+   "label": "Event Administration",
+   "links": "[\n    {\n        \"label\": \"Event General Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Receptionist Management\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"User Management\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"User Scheduler Management\",\n        \"name\": \"Dell User Schedule\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"User Type Management\",\n        \"name\": \"Dell User Type\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Briefcase Management\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Room Management\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Speaker Management\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Leaderboard Management\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    }\n]"
+  },
+  {
+   "hidden": 0,
+   "label": "Room Administration",
+   "links": "[\n    {\n        \"label\": \"Lobby Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Keynote Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Breakout1 Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Breakout2 Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Breakout3 Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Breakout4 Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Breakout5 Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Birds Of Feather (BOD) Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Dell Booth Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Sponsor Booth Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Poster Booth Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Engagement Zone Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    }\n]"
+  },
+  {
+   "hidden": 0,
+   "label": "Event Properties Administration",
+   "links": "[\n    {\n        \"label\": \"Video Repo\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Agenda\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Feedback Form\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Zoom link\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Resources Center\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Meeting Schedule Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Chat Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"Notification Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    }\n]"
+  },
+  {
+   "hidden": 0,
+   "label": "Event Log Administration",
+   "links": "[\n    {\n        \"label\": \"User Activity Log Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    },\n    {\n        \"label\": \"User Location Maintenance\",\n        \"name\": \"Dell User\",\n        \"onboard\": 0,\n        \"type\": \"doctype\"\n    }\n]"
+  }
+ ],
+ "cards_label": "",
+ "category": "Domains",
+ "charts": [],
+ "creation": "2020-08-11 20:40:55.839129",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Desk Page",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_standard": 1,
+ "label": "Virtual Event 11",
+ "modified": "2020-08-11 20:40:55.839129",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Virtual Event 11",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": []
+}

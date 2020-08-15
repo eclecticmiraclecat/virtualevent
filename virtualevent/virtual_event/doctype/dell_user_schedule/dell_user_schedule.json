@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-08-11 10:14:58.845268",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "dell_user",
+  "user_type",
+  "column_break_2",
+  "naming_series",
+  "title",
+  "color",
+  "section_break_6",
+  "schedule_date",
+  "v_room",
+  "column_break_9",
+  "from_time",
+  "to_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "dell_user",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Dell User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "user_type",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "label": "User Type",
+   "options": "\nEmployee\nPartner\nSpeaker\nLobby Onsite Support\nLobby Tech Support\nDELL Booth Admin\nSponsor Booth Admin\nPoster Booth Admin",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "SCH-.YYYY.-",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "label": "Schedule Date"
+  },
+  {
+   "default": "Room Name",
+   "fieldname": "v_room",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "label": "Virtual Room",
+   "options": "Dell Room",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "From Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "To Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Title"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-13 10:19:53.969625",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell User Schedule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Academics User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "restrict_to_domain": "Education",
+ "sort_field": "schedule_date",
+ "sort_order": "DESC",
+ "title_field": "title"
+}
