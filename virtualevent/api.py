@@ -152,26 +152,28 @@ def partner_login():
 def track_activity():
     data = json.loads(frappe.request.data)
 
-    print('frappe'*10, frappe.session)
-    print('frappe'*10, frappe.session['data'])
-
     room = data['room']
 
     if 'room' not in frappe.session['data']:
         frappe.session['data'].update({'room':[]})
 
+    print('old'*10, frappe.session['data']['room'])
 
-    frappe.session['data']['room'].append('hi')
-    print('frappe'*10, frappe.session['data'])
-    print('frappe'*10, frappe.session['data']['room'])
+    frappe.session['data']['room'].append(room)
+
+    print('new'*10, frappe.session['data']['room'])
 
     user = frappe.get_doc('User', frappe.session.user)
     dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
 
+    if len(frappe.session['data']['room']) > 1:
+        prev, current = frappe.session['data']['room'][-2:]
 
-    #frappe.session['room'].append(data['room'])
+        get_doc = frappe.db.get_value(prev, filters={'user_id': dell_user})
 
-    #print(frappe.session.room)
+        doc = frappe.get_doc(prev, get_doc)
+        doc.check_out = now_datetime()
+        doc.save(ignore_permissions=True)
 
     act = frappe.get_doc({
             "doctype": "Dell User Act Main Entry",
@@ -180,6 +182,4 @@ def track_activity():
             "activity": 'Click'
     })
     act.insert(ignore_permissions=True)
-
-
 
