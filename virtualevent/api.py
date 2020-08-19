@@ -147,3 +147,39 @@ def partner_login():
 
         return {'user inserted'}
 
+
+@frappe.whitelist()
+def track_activity():
+    data = json.loads(frappe.request.data)
+
+    print('frappe'*10, frappe.session)
+    print('frappe'*10, frappe.session['data'])
+
+    room = data['room']
+
+    if 'room' not in frappe.session['data']:
+        frappe.session['data'].update({'room':[]})
+
+
+    frappe.session['data']['room'].append('hi')
+    print('frappe'*10, frappe.session['data'])
+    print('frappe'*10, frappe.session['data']['room'])
+
+    user = frappe.get_doc('User', frappe.session.user)
+    dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
+
+
+    #frappe.session['room'].append(data['room'])
+
+    #print(frappe.session.room)
+
+    act = frappe.get_doc({
+            "doctype": "Dell User Act Main Entry",
+            "user_id": dell_user,
+            "check_in": now_datetime(),
+            "activity": 'Click'
+    })
+    act.insert(ignore_permissions=True)
+
+
+
