@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "autoname": "DVID-.#########",
+ "creation": "2020-08-18 18:29:19.291674",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "d_room",
+  "room_name",
+  "date_time",
+  "video_link",
+  "video_repo"
+ ],
+ "fields": [
+  {
+   "fieldname": "d_room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "Dell Room"
+  },
+  {
+   "fetch_from": "room_id.room_name",
+   "fieldname": "room_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Duration",
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Date Time"
+  },
+  {
+   "fieldname": "video_link",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Video Link"
+  },
+  {
+   "fieldname": "video_repo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Video Repository"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-18 18:40:01.292474",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Video1",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "autoname": "DAGD-.####",
+ "creation": "2020-08-19 12:13:13.697282",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "d_room",
+  "room_name",
+  "act_title",
+  "start_date",
+  "end_date",
+  "time_zone",
+  "activity",
+  "speaker",
+  "s_first_name",
+  "s_last_name",
+  "url_link",
+  "video_link",
+  "file_link"
+ ],
+ "fields": [
+  {
+   "fieldname": "d_room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "Dell Room",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "d_room.room_name",
+   "fieldname": "room_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Data",
+   "label": "Time Zone"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Select",
+   "label": "Activity",
+   "options": "\nClick\nView\nPlay\nChat\nMeet\nSend\nEmail\nLogin\nLogout\nPlay\nBack\nZoom"
+  },
+  {
+   "fieldname": "speaker",
+   "fieldtype": "Link",
+   "label": "Speaker",
+   "options": "Dell Speaker"
+  },
+  {
+   "fieldname": "url_link",
+   "fieldtype": "Data",
+   "label": "URL Link"
+  },
+  {
+   "fieldname": "video_link",
+   "fieldtype": "Data",
+   "label": "Video Link"
+  },
+  {
+   "fieldname": "file_link",
+   "fieldtype": "Data",
+   "label": "File Link"
+  },
+  {
+   "fieldname": "act_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activity Title"
+  },
+  {
+   "fetch_from": "s_first_name.first_name",
+   "fieldname": "s_first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Speaker First Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "s_last_name.last_name",
+   "fieldname": "s_last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Speaker Last Name",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-08-19 13:52:54.012557",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Agenda",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

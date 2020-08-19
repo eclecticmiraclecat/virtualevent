@@ -1,0 +1,13 @@
+{
+ "creation": "2020-08-16 16:00:32.693824",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2020-08-16 16:00:32.693824",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "User Activity",
+ "owner": "Administrator",
+ "source_name": "User Activity",
+ "timeseries": 0
+}

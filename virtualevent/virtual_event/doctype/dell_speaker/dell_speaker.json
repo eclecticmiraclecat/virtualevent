@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "DSPK-.####",
+ "creation": "2020-08-19 13:05:48.695103",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "email",
+  "m_contact",
+  "profile"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email"
+  },
+  {
+   "fieldname": "m_contact",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile Contact"
+  },
+  {
+   "fieldname": "profile",
+   "fieldtype": "Long Text",
+   "label": "Profile"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-19 13:24:00.436432",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Speaker",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

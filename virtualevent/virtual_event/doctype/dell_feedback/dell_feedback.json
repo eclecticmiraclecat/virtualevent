@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "DFEE-.####",
+ "creation": "2020-08-19 13:42:17.146788",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "q_1",
+  "a_1",
+  "q_2",
+  "a_2",
+  "q_3",
+  "a_3",
+  "q_4",
+  "a_4"
+ ],
+ "fields": [
+  {
+   "fieldname": "q_1",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Queastion 1"
+  },
+  {
+   "fieldname": "a_1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Answer 1",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "q_2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Queastion 2"
+  },
+  {
+   "fieldname": "a_2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Answer 2",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "q_3",
+   "fieldtype": "Data",
+   "label": "Question 3"
+  },
+  {
+   "fieldname": "a_3",
+   "fieldtype": "Select",
+   "label": "Answer 3",
+   "options": "\nVery Helpful\nHelpful\nSlightly Helpful\nNot Really"
+  },
+  {
+   "fieldname": "q_4",
+   "fieldtype": "Data",
+   "label": "Question 4"
+  },
+  {
+   "fieldname": "a_4",
+   "fieldtype": "Select",
+   "label": "Answer 4",
+   "options": "\nVery Helpful\nHelpful\nSlightly Helpful\nNot Really"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-19 13:47:52.635760",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Feedback",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
