@@ -2,7 +2,7 @@ import frappe
 import json
 import random
 from frappe import _
-from frappe.utils import nowdate, add_days, now_datetime
+from frappe.utils import nowdate, add_days, now_datetime, validate_email_address
 
 
 @frappe.whitelist()
@@ -31,68 +31,99 @@ def dell_employee_signup():
     #if data['email'].split('@')[1] not in {'dell.com', 'vmware.com', 'rsa.com', 'yahoo.com', 'framemotion.net', 'gmail.com'}:
     #    return {'invalid email domain'}
 
+    user = frappe.db.get_value("User", filters={"email": data["email"]})
+    dell_user = frappe.db.get_value("Dell User", filters={"email": data["email"]})
 
-    dell_user_badge_id = frappe.db.get_value("Dell User", filters={"badge_id": data["badge_id"]})
+    if user:
+        dell_user = frappe.get_doc('Dell User', dell_user)
 
-    if dell_user_badge_id:
-        return {'badge id already exists'}
+        if dell_user.sign_up_type == 'Pre Registered':
+            return {'Please login with badge id'}
 
-    user = frappe.get_doc({
-        "doctype": "User",
-        "email": data['email'],
-        "enabled": 1,
-        "username": data['first_name'],
-        "first_name": data['first_name'],
-        "user_type": "System User",
-    })
-    user.new_password = otp = ''.join(random.sample('0123456789', 5))
-    user.flags.no_welcome_mail = True
-    user.flags.ignore_permissions = True
-    try:
+        if dell_user.sign_up_type == 'Onsite Registered' and dell_user.first_login == '1':
+            return {'Please login with badge id'}
+
+        user = frappe.get_doc('User', data['email'])
+        #user.first_name = data['first_name'],
+        #user.last_name = data['last_name'],
+        #user.user_name = data['first_name'],
+        user.new_password = otp = ''.join(random.sample('0123456789', 5))
+        user.save(ignore_permissions=True)
+        frappe.sendmail(
+            recipients=data['email'],
+            subject='Registration OTP - Dell Quality Connect:Virtual 2020',
+            template='welcome',
+            args={
+                'msg': f'Thank you for registering for Quality Connect:Virtual 2020. Your authorization OTP is {otp}',
+            }
+        )
+        dell_user.first_name = data['first_name']
+        dell_user.last_name = data['last_name']
+        dell_user.badge_id = data['badge_id']
+        dell_user.sing_up_date = now_datetime()
+        dell_user.save(ignore_permissions=True)
+    else:
+        user = frappe.get_doc({
+            "doctype": "User",
+            "email": data['email'],
+            "enabled": 1,
+            "username": data['first_name'],
+            "first_name": data['first_name'],
+            "last_name": data['last_name'],
+            "user_type": "System User",
+        })
+        user.new_password = otp = ''.join(random.sample('0123456789', 5))
+        user.flags.no_welcome_mail = True
+        user.flags.ignore_permissions = True
         user.insert(ignore_permissions=True)
-    except frappe.exceptions.DuplicateEntryError:
-        return {'user already been created'}
-    user.add_roles("Dell User")
+        user.add_roles("Dell User")
 
 
-    dell_user = frappe.get_doc({
-        'doctype': 'Dell User',
-        'email': data['email'],
-        'badge_id': data['badge_id'],
-        'first_name': data['first_name'],
-        'last_name': data['last_name'],
-        'sign_up_type': 'Onsite Registered',
-        'sing_up_date': now_datetime(),
-        'user_type': 'Employee'
-    })
-    dell_user.insert(ignore_permissions=True)
+        dell_user = frappe.get_doc({
+            'doctype': 'Dell User',
+            'email': data['email'],
+            'badge_id': data['badge_id'],
+            'first_name': data['first_name'],
+            'last_name': data['last_name'],
+            'sign_up_type': 'Onsite Registered',
+            'sing_up_date': now_datetime(),
+            'user_type': 'Employee'
+        })
+        dell_user.insert(ignore_permissions=True)
 
 
-    frappe.sendmail(
-        recipients=data['email'],
-        subject='Registration OTP - Dell Quality Connect:Virtual 2020',
-        template='welcome',
-        args={
-            'msg': f'Thank you for registering for Quality Connect:Virtual 2020. Your authorization OTP is {otp}',
-        }
-    )
+        frappe.sendmail(
+            recipients=data['email'],
+            subject='Registration OTP - Dell Quality Connect:Virtual 2020',
+            template='welcome',
+            args={
+                'msg': f'Thank you for registering for Quality Connect:Virtual 2020. Your authorization OTP is {otp}',
+            }
+        )
 
     return {'user inserted'}
 
 
-@frappe.whitelist()
-def first_login():
-    #print('x'*50, frappe.session.user)
-    user = frappe.get_doc('User', frappe.session.user)
-    dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
-    dell_user = frappe.get_doc('Dell User', dell_user)
-    user.new_password = dell_user.badge_id
-    user.save(ignore_permissions=True)
+#@frappe.whitelist()
+#def first_login():
+#    #print('x'*50, frappe.session.user)
+#    user = frappe.get_doc('User', frappe.session.user)
+#    dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
+#    dell_user = frappe.get_doc('Dell User', dell_user)
+#    user.new_password = dell_user.badge_id
+#    user.save(ignore_permissions=True)
 
 
 @frappe.whitelist(allow_guest=True)
 def partner_login():
+
+    print('partner'*30)
+
     data = json.loads(frappe.request.data)
+
+    if not validate_email_address(data["email"]):
+        return {'invalid email address'}
+
 
     user = frappe.db.get_value("User", filters={"email": data["email"]})
 
@@ -154,14 +185,22 @@ def track_activity():
 
     room = data['room']
 
+
+    print(frappe.cache().get_value('blue'))
+    frappe.cache().get_value('room').append(room)
+
+
+#    print('data'*10, frappe.session)
+#    print('data'*10, frappe.session['data'])
+
     if 'room' not in frappe.session['data']:
         frappe.session['data'].update({'room':[]})
 
-    print('old'*10, frappe.session['data']['room'])
+#    print('old'*10, frappe.session['data']['room'])
 
     frappe.session['data']['room'].append(room)
 
-    print('new'*10, frappe.session['data']['room'])
+#    print('new'*10, frappe.session['data']['room'])
 
     user = frappe.get_doc('User', frappe.session.user)
     dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
@@ -173,6 +212,11 @@ def track_activity():
 
         doc = frappe.get_doc(prev, get_doc)
         doc.check_out = now_datetime()
+
+        print(doc.check_out)
+        print(doc.check_in)
+
+        #doc.duration = doc.check_out - doc.check_in
         doc.save(ignore_permissions=True)
 
     act = frappe.get_doc({
@@ -183,3 +227,82 @@ def track_activity():
     })
     act.insert(ignore_permissions=True)
 
+@frappe.whitelist(allow_guest=True)
+def validate_params():
+    data = json.loads(frappe.request.data)
+
+    email = data['email']
+    pwd = data.get('pwd')
+    otp = data.get('otp')
+
+    user = frappe.db.get_value("User", filters={"email": data["email"]})
+
+    if not user:
+        return 'no email id'
+
+    dell_user = frappe.db.get_value("Dell User", filters={"email": data["email"]})
+    dell_user = frappe.get_doc('Dell User', dell_user)
+
+    from frappe.utils.password import update_password, check_password, passlibctx
+
+    #auth = frappe.db.sql(f"""select `name`, `password` from `__Auth` where `doctype`='User' and `name`={email}""", as_dict=True)
+    auth = frappe.db.sql("""select `name`, `password` from `__Auth` where `doctype`='User' and `name`=%(email)s""",{'email': email}, as_dict=True)
+
+    if otp:
+        if not passlibctx.verify(otp, auth[0].password):
+            return {'wrong otp'}
+        return [{'first name': dell_user.first_name, 'email': dell_user.email}]
+
+    if pwd:
+        if not passlibctx.verify(pwd, auth[0].password):
+            return {'wrong password'}
+        return [{'first name': dell_user.first_name, 'email': dell_user.email}]
+
+
+@frappe.whitelist()
+def whoami():
+    return frappe.session.user
+
+
+@frappe.whitelist()
+def setup_log():
+
+    frappe.cache().set_value('room', ['360'])
+
+    #frappe.cache().get_value('room').append('blue')
+
+    user = frappe.get_doc('User', frappe.session.user)
+    dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
+    dell_log = frappe.db.get_value("Dell User Journey Log", filters={"user_id": dell_user})
+
+    if dell_log:
+        act = frappe.get_doc("Dell User Journey Log", dell_user)
+        act.append("log_detail", {"check_in": now_datetime(), "activity": 'Login', "d_room": "R-001"})
+        act.save()
+
+    else:
+        act = frappe.get_doc({
+                "doctype": "Dell User Journey Log",
+                "user_id": dell_user,
+                "log_detail": [{"check_in": now_datetime(), "activity": 'Login', "d_room": "R-001"}],
+        })
+        act.insert(ignore_permissions=True)
+
+        
+    if dell_user:
+        dell_user = frappe.get_doc('Dell User', dell_user)
+        if dell_user.sign_up_type == 'Onsite Registered' and dell_user.first_login == '0':
+            print('syncing'*20)
+            dell_user.first_login = 1
+            user.new_password = dell_user.badge_id
+            user.save(ignore_permissions=True)
+            dell_user.save(ignore_permissions=True)
+        
+
+@frappe.whitelist()
+def user_info():
+
+    user = frappe.get_doc('User', frappe.session.user)
+    dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
+
+    return frappe.db.sql("""select name, user_type, badge_id, first_name, last_name, email from `tabDell User` where `name`=%(name)s""",{'name': dell_user}, as_dict=True)

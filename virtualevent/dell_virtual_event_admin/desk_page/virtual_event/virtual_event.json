@@ -1,0 +1,29 @@
+{
+ "cards": [
+  {
+   "hidden": 0,
+   "label": "Event Administration",
+   "links": "[\r\n    {\r\n        \"label\": \"Event General Maintenance\",\r\n        \"name\": \"Dell Event\",\r\n        \"onboard\": 0,\r\n        \"type\": \"doctype\"\r\n    },\r\n    {\r\n        \"label\": \"User Management\",\r\n        \"name\": \"Dell User\",\r\n        \"onboard\": 0,\r\n        \"type\": \"doctype\"\r\n    },\r\n    {\r\n        \"label\": \"Briefcase Management\",\r\n        \"name\": \"Dell Briefcase\",\r\n        \"onboard\": 0,\r\n        \"type\": \"doctype\"\r\n    },\r\n    {\r\n        \"label\": \"Room Management\",\r\n        \"name\": \"Dell Room\",\r\n        \"onboard\": 0,\r\n        \"type\": \"doctype\"\r\n    },\r\n    {\r\n        \"label\": \"Speaker Management\",\r\n        \"name\": \"Dell Speaker\",\r\n        \"onboard\": 0,\r\n        \"type\": \"doctype\"\r\n    },\r\n    {\r\n        \"label\": \"Resource Center Management\",\r\n        \"name\": \"Dell Resource Center\",\r\n        \"onboard\": 0,\r\n        \"type\": \"doctype\"\r\n    }\r\n]"
+  }
+ ],
+ "category": "Domains",
+ "charts": [],
+ "creation": "2020-08-21 11:44:17.804473",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Desk Page",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_standard": 1,
+ "label": "Virtual Event",
+ "modified": "2020-08-21 11:46:24.818727",
+ "modified_by": "Administrator",
+ "module": "Dell Virtual Event Admin",
+ "name": "Virtual Event",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": []
+}

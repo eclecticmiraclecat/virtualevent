@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "autoname": "DLOG-KNT.############",
+ "creation": "2020-08-21 13:41:47.416606",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_id",
+  "act_timestamp",
+  "room",
+  "activity",
+  "check_in",
+  "check_out",
+  "duration"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Data",
+   "label": "User ID",
+   "search_index": 1
+  },
+  {
+   "fieldname": "act_timestamp",
+   "fieldtype": "Datetime",
+   "label": "Activity Time Stamp"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Select",
+   "label": "Room",
+   "options": "\nKeynote - Breakout 1"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Select",
+   "label": "Activity",
+   "options": "\nClick\nView\nPlay\nChat\nMeet\nSend\nEmail\nLogin\nLogout\nPlay\nBack\nZoom"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Date",
+   "label": "Check In"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Date",
+   "label": "Check Out"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-21 13:41:47.416606",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell User Act Keynote",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell Virtual Event Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

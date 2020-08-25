@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "creation": "2020-08-25 08:45:18.259687",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "question",
+  "answer"
+ ],
+ "fields": [
+  {
+   "fieldname": "question",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Question"
+  },
+  {
+   "fieldname": "answer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Answer"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-08-25 09:07:38.787128",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Trivia QnA",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

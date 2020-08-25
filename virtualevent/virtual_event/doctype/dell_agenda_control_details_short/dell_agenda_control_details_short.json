@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "creation": "2020-08-21 17:28:40.459047",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "agenda_no",
+  "duration",
+  "section_break_3",
+  "desp1",
+  "column_break_5",
+  "button1",
+  "section_break_7",
+  "desp2",
+  "column_break_9",
+  "button2",
+  "section_break_11",
+  "desp3",
+  "column_break_13",
+  "button3",
+  "section_break_15",
+  "desp4",
+  "column_break_17",
+  "button4",
+  "section_break_19",
+  "desp5",
+  "column_break_21",
+  "button5"
+ ],
+ "fields": [
+  {
+   "fieldname": "agenda_no",
+   "fieldtype": "Link",
+   "label": "Agenda Number",
+   "options": "Dell Agenda Control"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Duration"
+  },
+  {
+   "fieldname": "desp1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description1"
+  },
+  {
+   "fieldname": "button1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Button1",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "desp2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description2"
+  },
+  {
+   "fieldname": "button2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Button2",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "desp3",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description3"
+  },
+  {
+   "fieldname": "button3",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Button3",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "desp4",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description4"
+  },
+  {
+   "fieldname": "button4",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Button4",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "desp5",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description5"
+  },
+  {
+   "fieldname": "button5",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Button5",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-08-21 18:02:00.573538",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Agenda Control Details Short",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

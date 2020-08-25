@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "autoname": "DFEE-.####",
+ "creation": "2020-08-19 13:42:17.146788",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "q_1",
+  "a_1",
+  "q_2",
+  "a_2",
+  "q_3",
+  "q_3a",
+  "a_3a",
+  "q_3b",
+  "a_3b",
+  "q_3c",
+  "a_3c",
+  "q_3d",
+  "a_3d",
+  "q_3e",
+  "a_3e",
+  "q_3f",
+  "a_3f",
+  "q_4",
+  "a_4",
+  "q_5",
+  "a_5",
+  "q_6",
+  "a_6"
+ ],
+ "fields": [
+  {
+   "fieldname": "q_1",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Queastion 1"
+  },
+  {
+   "fieldname": "a_1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Answer 1",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "q_2",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Queastion 2"
+  },
+  {
+   "fieldname": "a_2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Answer 2",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "q_3",
+   "fieldtype": "Data",
+   "label": "Question 3"
+  },
+  {
+   "fieldname": "q_3a",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question 3A"
+  },
+  {
+   "fieldname": "a_3a",
+   "fieldtype": "Select",
+   "label": "Answer 3A",
+   "options": "\nVery Helpful\nHelpful\nSlightly Helpful\nNot Really"
+  },
+  {
+   "fieldname": "q_3b",
+   "fieldtype": "Data",
+   "label": "Question 3B"
+  },
+  {
+   "fieldname": "a_3b",
+   "fieldtype": "Select",
+   "label": "Answer 3B",
+   "options": "\nVery Helpful\nHelpful\nSlightly Helpful\nNot Really"
+  },
+  {
+   "fieldname": "q_3c",
+   "fieldtype": "Data",
+   "label": "Question 3C"
+  },
+  {
+   "fieldname": "a_3c",
+   "fieldtype": "Select",
+   "label": "Answer 3C",
+   "options": "\nVery Helpful\nHelpful\nSlightly Helpful\nNot Really"
+  },
+  {
+   "fieldname": "q_3d",
+   "fieldtype": "Data",
+   "label": "Question 3D"
+  },
+  {
+   "fieldname": "a_3d",
+   "fieldtype": "Select",
+   "label": "Answer 3D",
+   "options": "\nVery Helpful\nHelpful\nSlightly Helpful\nNot Really"
+  },
+  {
+   "fieldname": "q_3e",
+   "fieldtype": "Data",
+   "label": "Question 3E"
+  },
+  {
+   "fieldname": "a_3e",
+   "fieldtype": "Select",
+   "label": "Answer 3E",
+   "options": "\nVery Helpful\nHelpful\nSlightly Helpful\nNot Really"
+  },
+  {
+   "fieldname": "q_3f",
+   "fieldtype": "Data",
+   "label": "Question 3F"
+  },
+  {
+   "fieldname": "a_3f",
+   "fieldtype": "Select",
+   "label": "Answer 3F",
+   "options": "\nVery Helpful\nHelpful\nSlightly Helpful\nNot Really"
+  },
+  {
+   "fieldname": "q_4",
+   "fieldtype": "Data",
+   "label": "Question 4"
+  },
+  {
+   "fieldname": "a_4",
+   "fieldtype": "Select",
+   "label": "Answer 4",
+   "options": "\nExtremely Valuable\nVery Valuable\nSomewhat Valuable\nNot Relly"
+  },
+  {
+   "fieldname": "q_5",
+   "fieldtype": "Data",
+   "label": "Question 5"
+  },
+  {
+   "fieldname": "a_5",
+   "fieldtype": "Long Text",
+   "label": "Answer 5"
+  },
+  {
+   "fieldname": "q_6",
+   "fieldtype": "Data",
+   "label": "Question 6"
+  },
+  {
+   "fieldname": "a_6",
+   "fieldtype": "Long Text",
+   "label": "Answer 6"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-08-21 07:47:09.737812",
+ "modified_by": "Administrator",
+ "module": "Dell Event Properties Admin",
+ "name": "Dell Feedback",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

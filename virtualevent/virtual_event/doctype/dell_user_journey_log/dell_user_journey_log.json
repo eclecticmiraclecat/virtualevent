@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "autoname": "field:user_id",
+ "creation": "2020-08-20 12:12:55.839336",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_id",
+  "log_detail"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User ID",
+   "options": "Dell User",
+   "unique": 1
+  },
+  {
+   "fieldname": "log_detail",
+   "fieldtype": "Table",
+   "label": "Log Details",
+   "options": "Dell User Journey Log Detail"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-25 23:08:28.433502",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell User Journey Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

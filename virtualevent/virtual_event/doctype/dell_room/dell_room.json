@@ -27,7 +27,7 @@
   }
  ],
  "links": [],
- "modified": "2020-08-18 11:36:35.435931",
+ "modified": "2020-08-21 12:19:28.117140",
  "modified_by": "Administrator",
  "module": "Virtual Event",
  "name": "Dell Room",
@@ -53,7 +53,19 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Dell Virtual Event",
+   "role": "Dell Virtual Event Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
    "share": 1,
    "write": 1
   }

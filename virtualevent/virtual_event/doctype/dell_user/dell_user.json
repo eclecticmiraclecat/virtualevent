@@ -27,7 +27,8 @@
   "website",
   "name_card",
   "sing_up_date",
-  "sign_up_type"
+  "sign_up_type",
+  "first_login"
  ],
  "fields": [
   {
@@ -65,7 +66,8 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "label": "Email",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "hp_contact",
@@ -126,7 +128,8 @@
    "fieldname": "badge_id",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Badge ID"
+   "label": "Badge ID",
+   "unique": 1
   },
   {
    "fieldname": "sing_up_date",
@@ -139,10 +142,16 @@
    "fieldtype": "Select",
    "label": "Sign Up Type",
    "options": "\nPre-Registered\nOnsite Registered"
+  },
+  {
+   "default": "0",
+   "fieldname": "first_login",
+   "fieldtype": "Data",
+   "label": "First login"
   }
  ],
  "links": [],
- "modified": "2020-08-19 12:20:56.668913",
+ "modified": "2020-08-25 16:27:14.551843",
  "modified_by": "Administrator",
  "module": "Virtual Event",
  "name": "Dell User",
@@ -178,7 +187,19 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Dell Virtual Event",
+   "role": "Dell Virtual Event Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
    "share": 1,
    "write": 1
   }

@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "autoname": "DLOG-POB.############",
+ "creation": "2020-08-15 17:45:21.307169",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_id",
+  "act_timestamp",
+  "d_room",
+  "booth_no",
+  "activity",
+  "check_in",
+  "check_out",
+  "duration"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Data",
+   "label": "User ID",
+   "search_index": 1
+  },
+  {
+   "fieldname": "act_timestamp",
+   "fieldtype": "Datetime",
+   "label": "Activity Time Stamp"
+  },
+  {
+   "fieldname": "d_room",
+   "fieldtype": "Link",
+   "label": "Room",
+   "options": "Dell Room"
+  },
+  {
+   "fieldname": "booth_no",
+   "fieldtype": "Select",
+   "label": "Booth No",
+   "options": "\nPoster Booth 1\nPoster Booth 2\nPoster Booth 3\nPoster Booth 4\nPoster Booth 5\nPoster Booth 6\nPoster Booth 7\nPoster Booth 8\nPoster Booth 9\nPoster Booth 10\nPoster Booth 11\nPoster Booth 12\nPoster Booth 13\nPoster Booth 14\nPoster Booth 15\nPoster Booth 16\nPoster Booth 17\nPoster Booth 18\nPoster Booth 19\nPoster Booth 20\nPoster Booth 21\nPoster Booth 22\nPoster Booth 23\nPoster Booth 24\nPoster Booth 25\nPoster Booth 26\nPoster Booth 27\nPoster Booth 28\nPoster Booth 29\nPoster Booth 30\nPoster Booth 31\nPoster Booth 32"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Select",
+   "label": "Activity",
+   "options": "\nClick\nView\nPlay\nChat\nMeet\nSend\nEmail\nLogin\nLogout\nPlay\nBack\nZoom"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Date",
+   "label": "Check In"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Date",
+   "label": "Check Out"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-21 10:46:32.242606",
+ "modified_by": "Administrator",
+ "module": "Dell Event Log Admin",
+ "name": "Dell User Act Poster B",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell Virtual Event Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

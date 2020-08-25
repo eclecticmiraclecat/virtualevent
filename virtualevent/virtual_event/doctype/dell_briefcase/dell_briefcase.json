@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "autoname": "DBCS-.#####",
+ "creation": "2020-08-21 11:57:02.698475",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_id",
+  "user_type",
+  "first_name",
+  "last_name",
+  "column_break_5",
+  "d_room",
+  "room_name",
+  "video_link",
+  "file_link",
+  "time_stamp"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User ID",
+   "options": "Dell User"
+  },
+  {
+   "fetch_from": "user_id.user_type",
+   "fieldname": "user_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "d_room",
+   "fieldtype": "Link",
+   "label": "Room",
+   "options": "Dell Room"
+  },
+  {
+   "fetch_from": "d_room.room_name",
+   "fieldname": "room_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "user_id.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "user_id.last_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "video_link",
+   "fieldtype": "Data",
+   "label": "Video Link"
+  },
+  {
+   "fieldname": "file_link",
+   "fieldtype": "Data",
+   "label": "File Link"
+  },
+  {
+   "fieldname": "time_stamp",
+   "fieldtype": "Datetime",
+   "label": "Time Stamp"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-23 13:37:14.283582",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Briefcase",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

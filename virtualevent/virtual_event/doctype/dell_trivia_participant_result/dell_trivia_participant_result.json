@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "creation": "2020-08-25 09:14:32.950524",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_id",
+  "user_type",
+  "badge_id",
+  "q1",
+  "q2",
+  "q3",
+  "q4",
+  "q5",
+  "q6",
+  "q7",
+  "q8",
+  "q9",
+  "q10"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User ID",
+   "options": "Dell User"
+  },
+  {
+   "fetch_from": "user_id.user_type",
+   "fieldname": "user_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "user_id.badge_id",
+   "fieldname": "badge_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Badge ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "q1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Question 1",
+   "options": "Correct\nWrong"
+  },
+  {
+   "fieldname": "q2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Question 2",
+   "options": "Correct\nWrong"
+  },
+  {
+   "fieldname": "q3",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Question 3",
+   "options": "Correct\nWrong"
+  },
+  {
+   "fieldname": "q4",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Question 4",
+   "options": "Correct\nWrong"
+  },
+  {
+   "fieldname": "q5",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Question 5",
+   "options": "Correct\nWrong"
+  },
+  {
+   "fieldname": "q6",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Question 6",
+   "options": "Correct\nWrong"
+  },
+  {
+   "fieldname": "q7",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Question 7",
+   "options": "Correct\nWrong"
+  },
+  {
+   "fieldname": "q8",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Question 8",
+   "options": "Correct\nWrong"
+  },
+  {
+   "fieldname": "q9",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Question 9",
+   "options": "Correct\nWrong"
+  },
+  {
+   "fieldname": "q10",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Question 10",
+   "options": "Correct\nWrong"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-08-25 09:17:46.219305",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Trivia Participant Result",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

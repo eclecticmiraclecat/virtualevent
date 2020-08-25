@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "R-.###",
+ "creation": "2020-08-13 00:50:11.860421",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room_name",
+  "room_desc"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room_desc",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Room Description"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-21 07:48:24.244160",
+ "modified_by": "Administrator",
+ "module": "Dell Room Admin",
+ "name": "Dell Room",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell Virtual Event",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "room_name",
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "title_field": "room_name",
+ "track_changes": 1
+}

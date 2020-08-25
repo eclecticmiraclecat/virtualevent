@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "autoname": "DSP-.####",
+ "creation": "2020-08-25 19:21:01.929184",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "event_id",
+  "d_room",
+  "booth_no",
+  "sponsor_booth_name",
+  "recource_center",
+  "section_break_5"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Event ID",
+   "options": "Dell Event"
+  },
+  {
+   "fieldname": "d_room",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "\nSponsor Booth"
+  },
+  {
+   "fieldname": "booth_no",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Booth No",
+   "options": "\nSponsor Booth 1\nSponsor Booth 2\nSponsor Booth 3\nSponsor Booth 4\nSponsor Booth 5\nSponsor Booth 6\nSponsor Booth 7\nSponsor Booth 8\nSponsor Booth 9"
+  },
+  {
+   "fieldname": "recource_center",
+   "fieldtype": "Table",
+   "label": "Resource Center",
+   "options": "Dell Resource Center"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sponsor_booth_name",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Sponsor Booth Name",
+   "options": "Test.ai\nMircrosft\nTricentis\nUST Global\nCapgemini\nServiceNow\nApposite\nKeysight\nInfosys"
+  }
+ ],
+ "links": [
+  {
+   "link_doctype": "Event",
+   "link_fieldname": "subject"
+  }
+ ],
+ "modified": "2020-08-25 20:28:23.302778",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Sponsor Booth",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell Virtual Event Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

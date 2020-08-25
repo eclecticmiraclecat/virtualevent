@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "autoname": "DKNC-.####",
+ "creation": "2020-08-19 21:54:55.831447",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "region",
+  "d_date",
+  "section_break_3",
+  "activity_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "region",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Region",
+   "options": "\nAsia\nAmericas\nAsia/Americas"
+  },
+  {
+   "fieldname": "d_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "activity_details",
+   "fieldtype": "Table",
+   "label": "Activity Details",
+   "options": "Dell Agenda Control Details"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-21 07:47:41.512996",
+ "modified_by": "Administrator",
+ "module": "Dell Event Properties Admin",
+ "name": "Dell Agenda Control",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "autoname": "DKYN-.#####",
+ "creation": "2020-08-18 18:12:23.270206",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "event_id",
+  "event_title",
+  "d_room",
+  "room_name",
+  "section_break_5",
+  "video_repo",
+  "section_break_7",
+  "agenda",
+  "section_break_9",
+  "feedback"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Event ID",
+   "options": "Dell Event"
+  },
+  {
+   "fetch_from": "event_id.event_title",
+   "fieldname": "event_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Event Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "d_room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "Dell Room"
+  },
+  {
+   "fetch_from": "d_room.room_name",
+   "fieldname": "room_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "video_repo",
+   "fieldtype": "Table",
+   "label": "Video Repository",
+   "options": "Dell Video"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "agenda",
+   "fieldtype": "Table",
+   "label": "Agenda",
+   "options": "Dell Agenda"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "feedback",
+   "fieldtype": "Table",
+   "label": "Feedback",
+   "options": "Dell Feedback"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-21 07:46:54.429672",
+ "modified_by": "Administrator",
+ "module": "Dell Room Admin",
+ "name": "Dell Keynote",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell Virtual Event",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell User",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

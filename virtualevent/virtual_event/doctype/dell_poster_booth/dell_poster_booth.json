@@ -9,7 +9,7 @@
  "field_order": [
   "event_id",
   "d_room",
-  "booth_no",
+  "poster_booth_no",
   "recource_center",
   "section_break_5"
  ],
@@ -29,13 +29,6 @@
    "options": "\nPoster Booth"
   },
   {
-   "fieldname": "booth_no",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Booth No",
-   "options": "\nPoster Booth 1\nPoster Booth 2\nPoster Booth 3\nPoster Booth 4\nPoster Booth 5\nPoster Booth 6\nPoster Booth 7\nPoster Booth 8\nPoster Booth 9\nPoster Booth 10\nPoster Booth 11\nPoster Booth 12\nPoster Booth 13\nPoster Booth 14\nPoster Booth 15\nPoster Booth 16\nPoster Booth 17\nPoster Booth 18\nPoster Booth 19\nPoster Booth 20\nPoster Booth 21\nPoster Booth 22\nPoster Booth 23\nPoster Booth 24\nPoster Booth 25\nPoster Booth 26\nPoster Booth 27\nPoster Booth 28\nPoster Booth 29\nPoster Booth 30\nPoster Booth 31\nPoster Booth 32"
-  },
-  {
    "fieldname": "recource_center",
    "fieldtype": "Table",
    "label": "Resource Center",
@@ -44,10 +37,17 @@
   {
    "fieldname": "section_break_5",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "poster_booth_no",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Poster Booth No",
+   "options": "\nPoster Booth 1\nPoster Booth 2\nPoster Booth 3\nPoster Booth 4\nPoster Booth 5\nPoster Booth 6\nPoster Booth 7\nPoster Booth 8\nPoster Booth 9\nPoster Booth 10\nPoster Booth 11\nPoster Booth 12\nPoster Booth 13\nPoster Booth 14\nPoster Booth 15\nPoster Booth 16\nPoster Booth 17\nPoster Booth 18\nPoster Booth 19\nPoster Booth 20\nPoster Booth 21\nPoster Booth 22\nPoster Booth 23\nPoster Booth 24\nPoster Booth 25\nPoster Booth 26\nPoster Booth 27\nPoster Booth 28\nPoster Booth 29\nPoster Booth 30\nPoster Booth 31\nPoster Booth 32"
   }
  ],
  "links": [],
- "modified": "2020-08-18 11:33:03.915713",
+ "modified": "2020-08-25 21:22:00.959103",
  "modified_by": "Administrator",
  "module": "Virtual Event",
  "name": "Dell Poster Booth",
@@ -73,7 +73,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Dell Virtual Event",
+   "role": "Dell Virtual Event Admin",
    "share": 1,
    "write": 1
   }

@@ -1,2 +1,6 @@
 VirtualEvent
 Virtual Event
+Dell Room Admin
+Dell Event Properties Admin
+Dell Event Log Admin
+Dell Event Report

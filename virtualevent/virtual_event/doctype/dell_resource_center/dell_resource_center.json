@@ -11,7 +11,8 @@
   "video_link",
   "video_repo",
   "file_repo",
-  "photos"
+  "photos",
+  "zoom_link"
  ],
  "fields": [
   {
@@ -23,32 +24,41 @@
   {
    "fieldname": "time_stamp",
    "fieldtype": "Datetime",
+   "in_list_view": 1,
    "label": "Time Stamp"
   },
   {
    "fieldname": "video_link",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Video Link"
   },
   {
    "fieldname": "video_repo",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Video Repository"
   },
   {
    "fieldname": "file_repo",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "File Repository"
   },
   {
    "fieldname": "photos",
    "fieldtype": "Attach Image",
    "label": "Photos"
+  },
+  {
+   "fieldname": "zoom_link",
+   "fieldtype": "Data",
+   "label": "Zoom Link"
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2020-08-18 11:34:02.649932",
+ "modified": "2020-08-23 13:52:07.335192",
  "modified_by": "Administrator",
  "module": "Virtual Event",
  "name": "Dell Resource Center",

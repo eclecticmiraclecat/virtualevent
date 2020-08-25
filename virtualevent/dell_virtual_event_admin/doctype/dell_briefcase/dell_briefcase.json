@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "DBCS-.######",
+ "creation": "2020-08-21 10:58:28.656122",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_id",
+  "user_type",
+  "first_name",
+  "last_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User ID",
+   "options": "Dell User"
+  },
+  {
+   "fieldname": "user_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User Type",
+   "options": "Dell User"
+  },
+  {
+   "fetch_from": "user_id.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "user_id.last_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-21 10:58:28.656122",
+ "modified_by": "Administrator",
+ "module": "Dell Virtual Event Admin",
+ "name": "Dell Briefcase",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -75,7 +75,7 @@
   }
  ],
  "links": [],
- "modified": "2020-08-18 18:18:49.410076",
+ "modified": "2020-08-21 12:27:02.145582",
  "modified_by": "Administrator",
  "module": "Virtual Event",
  "name": "Dell Event",
@@ -101,7 +101,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Dell Virtual Event",
+   "role": "Dell Virtual Event Admin",
    "share": 1,
    "write": 1
   }

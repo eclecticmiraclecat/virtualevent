@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "autoname": "DDM-.####",
+ "creation": "2020-08-21 18:30:36.108587",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "event_id",
+  "d_room",
+  "region",
+  "demo_booth_no",
+  "d_video",
+  "section_break_5",
+  "d_files"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Event ID",
+   "options": "Dell Event"
+  },
+  {
+   "fieldname": "d_room",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "\nDemo Booth"
+  },
+  {
+   "fieldname": "d_video",
+   "fieldtype": "Table",
+   "label": "Video",
+   "options": "Dell Video"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "d_files",
+   "fieldtype": "Table",
+   "label": "Files",
+   "options": "Dell Files Upload"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Select",
+   "label": "Region",
+   "options": "\nAsia\nAmerica\nAsia & America"
+  },
+  {
+   "fieldname": "demo_booth_no",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Demo Booth No",
+   "options": "\nDemo Booth 1\nDemo Booth 2\nDemo Booth 3\nDemo Booth 4\nDemo Booth 5\nDemo Booth 6\nDemo Booth 7\nDemo Booth 8\nDemo Booth 9\nDemo Booth 10\nDemo Booth 11"
+  }
+ ],
+ "links": [],
+ "modified": "2020-08-25 20:39:50.454243",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Demo Booth",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell Virtual Event Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell User",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

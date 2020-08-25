@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_import": 1,
+ "autoname": "DKNC-.####",
+ "creation": "2020-08-19 21:54:55.831447",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "region",
+  "d_date",
+  "section_break_3",
+  "activity_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "d_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Region",
+   "options": "\nAsia\nAmerica\nAsia/America"
+  },
+  {
+   "fieldname": "activity_details",
+   "fieldtype": "Table",
+   "label": "Activity Details",
+   "options": "Dell Agenda Control Details Short"
+  }
+ ],
+ "hide_toolbar": 1,
+ "links": [],
+ "modified": "2020-08-24 21:06:03.939755",
+ "modified_by": "lyon@framemotionstudio.com",
+ "module": "Virtual Event",
+ "name": "Dell Agenda Control",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dell User",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "read_only": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

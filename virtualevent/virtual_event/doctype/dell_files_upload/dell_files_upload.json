@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "autoname": "DFIL-.#########",
+ "creation": "2020-08-21 18:43:53.277850",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "d_room",
+  "room_name",
+  "file_link",
+  "file_repo",
+  "format"
+ ],
+ "fields": [
+  {
+   "fieldname": "d_room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "Dell Room"
+  },
+  {
+   "fetch_from": "d_room.room_name",
+   "fieldname": "room_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Room Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "file_link",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "File Link"
+  },
+  {
+   "fieldname": "file_repo",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "File Repository"
+  },
+  {
+   "fieldname": "format",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Format"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-08-21 18:43:53.277850",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Files Upload",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

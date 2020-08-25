@@ -1,0 +1,254 @@
+{
+ "actions": [],
+ "creation": "2020-08-20 12:50:13.993142",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "agenda_no",
+  "desp",
+  "chi_timezone",
+  "ind_timezone",
+  "isr_timezone",
+  "uk_timezone",
+  "edt_timezone",
+  "cdt_timezone",
+  "pdt_timezone",
+  "duration",
+  "open_remarks",
+  "openrem_video_link",
+  "section_break_12",
+  "keynote_1",
+  "keynote_2",
+  "keynote_3",
+  "keynote_4",
+  "section_break_17",
+  "track1_name",
+  "track1_status",
+  "column_break_20",
+  "track2_name",
+  "track2_status",
+  "column_break_23",
+  "track3_name",
+  "track3_status",
+  "column_break_26",
+  "track4_name",
+  "track4_status",
+  "column_break_29",
+  "track5_name",
+  "track5_status",
+  "column_break_32",
+  "section_break_33",
+  "leader_panel",
+  "showcase_open"
+ ],
+ "fields": [
+  {
+   "fieldname": "chi_timezone",
+   "fieldtype": "Time",
+   "label": "China Time Zone"
+  },
+  {
+   "fieldname": "ind_timezone",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "India Time Zone"
+  },
+  {
+   "fieldname": "isr_timezone",
+   "fieldtype": "Time",
+   "label": "Israel Time Zone"
+  },
+  {
+   "fieldname": "uk_timezone",
+   "fieldtype": "Time",
+   "label": "UK Time Zone"
+  },
+  {
+   "fieldname": "edt_timezone",
+   "fieldtype": "Time",
+   "label": "EDT Time Zone"
+  },
+  {
+   "fieldname": "cdt_timezone",
+   "fieldtype": "Time",
+   "label": "CDT Time Zone"
+  },
+  {
+   "fieldname": "pdt_timezone",
+   "fieldtype": "Time",
+   "label": "PDT Time Zone"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Duration"
+  },
+  {
+   "fieldname": "open_remarks",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Opening Remarks",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "openrem_video_link",
+   "fieldtype": "Date",
+   "label": "Open Remark Video Link"
+  },
+  {
+   "fieldname": "keynote_1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Keynote 1",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "keynote_2",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Keynote 2",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "keynote_3",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Keynote 3",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "keynote_4",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Keynote 4",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "track1_name",
+   "fieldtype": "Data",
+   "label": "Track1 Name"
+  },
+  {
+   "fieldname": "track1_status",
+   "fieldtype": "Select",
+   "label": "Track1 Status",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "track2_name",
+   "fieldtype": "Data",
+   "label": "Track2 Name"
+  },
+  {
+   "fieldname": "track2_status",
+   "fieldtype": "Select",
+   "label": "Track2 Status",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "track3_name",
+   "fieldtype": "Data",
+   "label": "Track3 Name"
+  },
+  {
+   "fieldname": "track3_status",
+   "fieldtype": "Select",
+   "label": "Track3 Status",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "track4_name",
+   "fieldtype": "Data",
+   "label": "Track4 Name"
+  },
+  {
+   "fieldname": "track4_status",
+   "fieldtype": "Select",
+   "label": "Track4 Status",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "track5_name",
+   "fieldtype": "Data",
+   "label": "Track5 Name"
+  },
+  {
+   "fieldname": "track5_status",
+   "fieldtype": "Select",
+   "label": "Track3 Status",
+   "options": "\nEnable\nDisable"
+  },
+  {
+   "fieldname": "leader_panel",
+   "fieldtype": "Select",
+   "label": "Leadership Panel",
+   "options": "\nOpen\nClose"
+  },
+  {
+   "fieldname": "showcase_open",
+   "fieldtype": "Select",
+   "label": "Showcase Opens",
+   "options": "\nOpen\nClose"
+  },
+  {
+   "fieldname": "agenda_no",
+   "fieldtype": "Link",
+   "label": "Agenda Number",
+   "options": "Dell Agenda Control"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_33",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "desp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-08-20 13:21:48.824965",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell Agenda Control Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

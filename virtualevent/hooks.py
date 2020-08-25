@@ -79,6 +79,13 @@ app_license = "MIT"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
+
+# login
+
+on_session_creation = [
+        "virtualevent.api.setup_log",
+]
+
 # Document Events
 # ---------------
 # Hook on document methods and events

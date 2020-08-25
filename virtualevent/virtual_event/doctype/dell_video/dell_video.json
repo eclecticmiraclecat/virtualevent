@@ -9,9 +9,10 @@
  "field_order": [
   "d_room",
   "room_name",
-  "date_time",
+  "session",
   "video_link",
-  "video_repo"
+  "video_repo",
+  "format"
  ],
  "fields": [
   {
@@ -22,19 +23,12 @@
    "options": "Dell Room"
   },
   {
-   "fetch_from": "room_id.room_name",
+   "fetch_from": "d_room.room_name",
    "fieldname": "room_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Room Name",
    "read_only": 1
-  },
-  {
-   "fieldname": "date_time",
-   "fieldtype": "Duration",
-   "hide_seconds": 1,
-   "in_list_view": 1,
-   "label": "Date Time"
   },
   {
    "fieldname": "video_link",
@@ -47,11 +41,24 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Video Repository"
+  },
+  {
+   "fieldname": "format",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Format"
+  },
+  {
+   "fieldname": "session",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Session",
+   "options": "\nSession 1\nSession 2\nSession 3"
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2020-08-19 11:57:43.829323",
+ "modified": "2020-08-25 20:52:09.969130",
  "modified_by": "Administrator",
  "module": "Virtual Event",
  "name": "Dell Video",

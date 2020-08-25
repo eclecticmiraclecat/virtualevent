@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "autoname": "DUJL-DET-.#######",
+ "creation": "2020-08-21 14:47:34.198947",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_id",
+  "time_stamp",
+  "activity",
+  "d_room",
+  "check_in",
+  "check_out",
+  "t_duration",
+  "show_case"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User ID",
+   "options": "Dell User"
+  },
+  {
+   "fieldname": "time_stamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Time Stamp"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Activity",
+   "options": "\nClick\nView\nPlay\nChat\nMeet\nSend\nEmail\nLogin\nLogout\nPlay\nBack\nZoom"
+  },
+  {
+   "fieldname": "d_room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "Dell Room"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Check In"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Check Out"
+  },
+  {
+   "fieldname": "t_duration",
+   "fieldtype": "Duration",
+   "in_list_view": 1,
+   "label": "Duration"
+  },
+  {
+   "fieldname": "show_case",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Show Case Time",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-08-21 14:51:26.714455",
+ "modified_by": "Administrator",
+ "module": "Virtual Event",
+ "name": "Dell User Journey Log Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
