@@ -31,8 +31,16 @@ def dell_employee_signup():
     #if data['email'].split('@')[1] not in {'dell.com', 'vmware.com', 'rsa.com', 'yahoo.com', 'framemotion.net', 'gmail.com'}:
     #    return {'invalid email domain'}
 
+    if frappe.session['user'] != 'Guest':
+        pass
+
     user = frappe.db.get_value("User", filters={"email": data["email"]})
     dell_user = frappe.db.get_value("Dell User", filters={"email": data["email"]})
+
+    check_badge_id = frappe.db.sql("""select name, user_type, badge_id, first_name, last_name, email from `tabDell User` where `badge_id`=%(badge_id)s and first_login='1'""",{'badge_id': data['badge_id']})
+
+    check_pre_badge_id = frappe.db.sql("""select name, user_type, badge_id, first_name, last_name, email from `tabDell User` where `badge_id`=%(badge_id)s and sign_up_type='Pre-Registered'""",{'badge_id': data['badge_id']})
+
 
     if user:
         dell_user = frappe.get_doc('Dell User', dell_user)
@@ -43,10 +51,10 @@ def dell_employee_signup():
         if dell_user.sign_up_type == 'Onsite Registered' and dell_user.first_login == '1':
             return {'Please login with badge id'}
 
+        if check_badge_id or check_pre_badge_id:
+            return {'badge id has been already registered'}
+
         user = frappe.get_doc('User', data['email'])
-        #user.first_name = data['first_name'],
-        #user.last_name = data['last_name'],
-        #user.user_name = data['first_name'],
         user.new_password = otp = ''.join(random.sample('0123456789', 5))
         user.save(ignore_permissions=True)
         frappe.sendmail(
@@ -101,7 +109,7 @@ def dell_employee_signup():
             }
         )
 
-    return {'user inserted'}
+    return {'mail sent'}
 
 
 #@frappe.whitelist()
@@ -116,8 +124,6 @@ def dell_employee_signup():
 
 @frappe.whitelist(allow_guest=True)
 def partner_login():
-
-    print('partner'*30)
 
     data = json.loads(frappe.request.data)
 
@@ -143,7 +149,6 @@ def partner_login():
             }
         )
     else:
-        print('hi'*20)
         user = frappe.get_doc({
             "doctype": "User",
             "email": data['email'],
@@ -186,28 +191,31 @@ def track_activity():
     room = data['room']
 
 
-    print(frappe.cache().get_value('blue'))
+#    print(frappe.cache().get_value('blue'))
     frappe.cache().get_value('room').append(room)
 
 
 #    print('data'*10, frappe.session)
 #    print('data'*10, frappe.session['data'])
 
-    if 'room' not in frappe.session['data']:
-        frappe.session['data'].update({'room':[]})
+#    if 'room' not in frappe.session['data']:
+#        frappe.session['data'].update({'room':[]})
 
 #    print('old'*10, frappe.session['data']['room'])
 
-    frappe.session['data']['room'].append(room)
+#    frappe.session['data']['room'].append(room)
 
 #    print('new'*10, frappe.session['data']['room'])
 
     user = frappe.get_doc('User', frappe.session.user)
     dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
 
-    if len(frappe.session['data']['room']) > 1:
-        prev, current = frappe.session['data']['room'][-2:]
+#    if len(frappe.session['data']['room']) > 1:
+#        prev, current = frappe.session['data']['room'][-2:]
 
+    # add checkout time
+    if len(frappe.cache().get_value('room')) > 1:
+        prev, current = frappe.session['data']['room'][-2:]
         get_doc = frappe.db.get_value(prev, filters={'user_id': dell_user})
 
         doc = frappe.get_doc(prev, get_doc)
@@ -232,8 +240,14 @@ def validate_params():
     data = json.loads(frappe.request.data)
 
     email = data['email']
+    #badge_id = data['badge_id']
     pwd = data.get('pwd')
     otp = data.get('otp')
+
+    #check_badge_id = frappe.db.sql("""select name, user_type, badge_id, first_name, last_name, email from `tabDell User` where `badge_id`=%(badge_id)s and first_login='1'""",{'badge_id': badge_id]})
+
+    #if check_badge_id:
+    #    return {'badge id has been already registered'}
 
     user = frappe.db.get_value("User", filters={"email": data["email"]})
 
@@ -261,13 +275,16 @@ def validate_params():
 
 @frappe.whitelist()
 def whoami():
+    
+    #return frappe.local.response
+    print(frappe.local.response)
     return frappe.session.user
 
 
 @frappe.whitelist()
 def setup_log():
 
-    frappe.cache().set_value('room', ['360'])
+    frappe.cache().set_value('room', ['Dell User Act Main Entry'])
 
     #frappe.cache().get_value('room').append('blue')
 
@@ -275,18 +292,18 @@ def setup_log():
     dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
     dell_log = frappe.db.get_value("Dell User Journey Log", filters={"user_id": dell_user})
 
-    if dell_log:
-        act = frappe.get_doc("Dell User Journey Log", dell_user)
-        act.append("log_detail", {"check_in": now_datetime(), "activity": 'Login', "d_room": "R-001"})
-        act.save()
+    #if dell_user:
+    #    act = frappe.get_doc("Dell User Journey Log", dell_user)
+    #    act.append("log_detail", {"check_in": now_datetime(), "activity": 'Login', "d_room": "R-016"})
+    #    act.save()
 
-    else:
-        act = frappe.get_doc({
-                "doctype": "Dell User Journey Log",
-                "user_id": dell_user,
-                "log_detail": [{"check_in": now_datetime(), "activity": 'Login', "d_room": "R-001"}],
-        })
-        act.insert(ignore_permissions=True)
+    #else:
+    #    act = frappe.get_doc({
+    #            "doctype": "Dell User Journey Log",
+    #            "user_id": dell_user,
+    #            "log_detail": [{"check_in": now_datetime(), "activity": 'Login', "d_room": "R-016"}],
+    #    })
+    #    act.insert(ignore_permissions=True)
 
         
     if dell_user:
@@ -299,10 +316,50 @@ def setup_log():
             dell_user.save(ignore_permissions=True)
         
 
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def user_info():
+
+    data = json.loads(frappe.request.data)
+
+    #user = frappe.get_doc('User', frappe.session.user)
+    #dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
+
+    dell_user = frappe.db.get_value("Dell User", filters={"email": data['email']})
+
+    return frappe.db.sql("""select name, user_type, badge_id, first_name, last_name, email from `tabDell User` where `name`=%(name)s""",{'name': dell_user}, as_dict=True)
+
+
+@frappe.whitelist()
+def schedule_meeting():
+
+    print(frappe.session.user)
 
     user = frappe.get_doc('User', frappe.session.user)
     dell_user = frappe.db.get_value("Dell User", filters={"email": user.email})
+    #dell_user = frappe.get_doc('Dell User', dell_user)
 
-    return frappe.db.sql("""select name, user_type, badge_id, first_name, last_name, email from `tabDell User` where `name`=%(name)s""",{'name': dell_user}, as_dict=True)
+    print(dell_user)
+
+    data = json.loads(frappe.request.data)
+
+    print(data)
+
+    check_meeting = frappe.db.sql("""select * from `tabEvent` where `booth_id`=%(booth_id)s and `starts_on`<=%(starts_on)s and `ends_on`>=%(ends_on)s""",{'booth_id': data['booth_id'], 'starts_on': data['starts_on'], 'ends_on': data['ends_on']})
+
+
+    print(check_meeting)
+
+    if check_meeting:
+        return {'meeting already exists'}
+    else:
+        meeting = frappe.get_doc({
+            "doctype": "Event",
+            "subject": data['subject'],
+            "starts_on": data['starts_on'],
+            "ends_on": data['ends_on'],
+            "booth_id": data['booth_id'],
+            "even_parts": [{"user_id": dell_user}],
+        })
+        meeting.insert(ignore_permissions=True)
+
+        return {'meeting been created'}
